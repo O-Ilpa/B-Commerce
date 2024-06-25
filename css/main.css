@@ -284,7 +284,7 @@ header {
   position: relative;
   background-size: cover;
   width: auto;
-  background-image: url(/images/bigstock-A-pile-of-books-with-library-o-54563726.jpg);
+  background-image: url(../images/bigstock-A-pile-of-books-with-library-o-54563726.jpg);
   border-radius: var(--main-radius);
 }
 .About-us .content .img::before {
