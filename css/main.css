@@ -487,10 +487,6 @@ header {
   height: 200px;
   margin: 10px;
 }
-.Contact-us .container form input,textarea:focus::placeholder {
-  color: black;
-  top: -10px;
-}
 .maps {
   border: solid 2px var(--header-color) !important;
   margin: 10px;
