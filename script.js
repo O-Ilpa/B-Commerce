@@ -1,11 +1,10 @@
-//  >>======================** By ChatGpt **======================>>
 const textElement = document.getElementById("animated-text");
 const texts = ["B", "Book"];
 let index = 0;
 let charIndex = 0;
-let typingSpeed = 150; // milliseconds
-let deletingSpeed = 100; // milliseconds
-let pauseBetween = 2000; // milliseconds
+let typingSpeed = 150;
+let deletingSpeed = 100;
+let pauseBetween = 2000;
 
 function typeText() {
   if (charIndex < texts[index].length) {
@@ -31,9 +30,13 @@ function deleteText() {
 document.addEventListener("DOMContentLoaded", () => {
   setTimeout(typeText, pauseBetween);
 });
-//  ^^======================** By ChatGpt **======================^^
+function togglePaymentDetails(method) {
+  document.getElementById("visa-details").style.display =
+    method === "visa" ? "block" : "none";
+  document.getElementById("paypal-details").style.display =
+    method === "paypal" ? "block" : "none";
+}
 
-//  By OmarIlpa
 let icon = document.getElementById("togglemenu");
 let toggleMenu = document.getElementById("Nav");
 
@@ -59,16 +62,32 @@ btn.onclick = function () {
   });
 };
 
-let al = document.getElementById("alert");
-let butn = document.getElementById("btn");
-let overLay = document.getElementById("overlay");
+let Alert = document.getElementById("alert");
+let Button = document.getElementById("btn");
+let OverLay = document.getElementById("overlay");
 
 setTimeout(() => {
-  overLay.style.cssText = "display: block;";
-  al.style.cssText = "display: flex;  ";
-}, 6000);
+  OverLay.style.cssText = "display: block;";
+  Alert.style.cssText = "display: flex;  ";
+}, 1000);
 
-butn.onclick = function () {
-  overLay.style.cssText = "display: none;";
-  al.style.cssText = "display: none;";
+Button.onclick = function () {
+  OverLay.style.cssText = "display: none;";
+  Alert.style.cssText = "display: none;";
 };
+OverLay.onclick = function () {
+  overLay.style.cssText = "display: none;";
+  Alert.style.cssText = "display: none;";
+};
+
+let header = document.querySelector("header");
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= 1500) {
+    header.style.position = "fixed";
+    header.style.top = "10px";
+  } else {
+    header.style.position = "absolute";
+    header.style.top = "0px";
+  }
+});
