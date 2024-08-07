@@ -35,25 +35,112 @@
       <div class="nav-bar">
         <i class="fa-solid fa-bars" id="togglemenu"></i>
         <ul class="nav" id="Nav">
-          <li><a href="index.html" >Home</a></li>
-          <li><a href="about.html"class="active">About Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
           <li><a href="product.html">Products</a></li>
           <li><a href="#contact">Contact Us</a></li>
-          <li><a href="donate.html">Donate</a></li>
         </ul>
       </div>
     </div>
   </header>
   <!-- End Header -->
+  <div id="MainAlert">
+    <div id="MainContainer">
+      <lord-icon src="https://cdn.lordicon.com/cjknrhek.json" trigger="loop" state="loop-oscillate"
+        style="width:250px;height:250px">
+      </lord-icon>
+      <h1>Website is Under Construction</h1>
+      <p>Thank you for visiting! I am a junior front-end web developer, and this website is currently a work in
+        progress. As I continue to learn and grow, there may be some issues and unfinished elements. I appreciate your
+        patience and understanding as I work to improve my skills and enhance this site.</p>
+      <a href="index.html" id="MainButton">Go Back</a>
+    </div>
+  </div>
+  <div id="MainOverlay"></div>
   <!-- Start landing -->
   <div class="a-landing">
     <div class="container">
       <img class="mob" src="images/istockphoto-1730872366-170667a.jpg" alt="">
-      <img class="pc" src="images/1920x1080-px-books-interior-design-interiors-knowledge-library-shelves-anime-pokemon-hd-art-wallpaper-preview.jpg" alt="">
+      <img class="pc"
+        src="images/1920x1080-px-books-interior-design-interiors-knowledge-library-shelves-anime-pokemon-hd-art-wallpaper-preview.jpg"
+        alt="">
       <h1>About Us</h1>
     </div>
   </div>
   <!-- End landing -->
+  <!-- Start About -->
+  <section id="About-us" class="About-us">
+    <div class="heading">
+      <h1>Learn more About Us</h1>
+    </div>
+    <div class="content">
+      <div class="img"></div>
+      <div class="items">
+        <div class="box">
+          <lord-icon src="https://cdn.lordicon.com/lenjvibx.json" trigger="hover" stroke="bold" state="hover-flutter"
+            colors="primary:#121331,secondary:#3b2c1a" style="width:50px;height:50px">
+          </lord-icon>
+          <h1>Our Collection</h1>
+          <p>Discover a wide range of books from various genres and authors. From classic literature to modern fiction,
+            our library caters to all interests and age groups. Whether you're looking for academic resources or a
+            gripping novel, you'll find something for everyone.</p>
+          <a class="about" href="/about.html">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+        <div class="box">
+          <lord-icon src="https://cdn.lordicon.com/jdalicnn.json" trigger="hover" stroke="bold"
+            colors="primary:#121331,secondary:#3b2c1a" style="width:50px;height:50px">
+          </lord-icon>
+          <h1>Our Services</h1>
+          <p>We offer book lending, reading rooms, free Wi-Fi, and various workshops. Our dedicated team is always ready
+            to assist you. We provide personalized recommendations to help you discover new books and authors.</p>
+          <a class="about" href="/about.html">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+        <div class="box">
+          <lord-icon src="https://cdn.lordicon.com/pbkjsbwk.json" trigger="hover" stroke="bold"
+            colors="primary:#121331,secondary:#03045e" style="width:50px;height:50px">
+          </lord-icon>
+          <h1>Our Mission</h1>
+          <p>We aim to foster a love for reading and lifelong learning. Through our diverse collection and comprehensive
+            services, we support the educational and personal development of our community.</p>
+          <a class="about" href="/about.html">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+        <div class="box">
+          <lord-icon src="https://cdn.lordicon.com/qvyppzqz.json" trigger="hover" stroke="bold" state="hover-oscillate"
+            colors="primary:#121331,secondary:#3b2c1a" style="width:50px;height:50px">
+          </lord-icon>
+          <h1>Operating Hours</h1>
+          <p>We're open daily from 9 AM to 8 PM. Our library is a quiet and comfortable space where you can read, study,
+            and relax. Drop by and explore our collection at your convenience.</p>
+          <a class="about" href="/about.html">Learn More <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End About -->
+  <!-- Start ContactUs  -->
+  <section id="contact" class="Contact-us">
+    <div class="container">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <div class="main-heading form" style="
+            word-spacing: 14.2px; position: relative;">
+          <h1>Get In Touch</h1>
+          <hr>
+        </div>
+        <input type="hidden" name="access_key" value="aff29cd3-3db7-4b12-8616-a6cafbf562dc">
+        <input type="text" name="Full Name" required placeholder="Your Full Name" minlength="10">
+        <input type="phone-number" name="Phone Number" id="phone" required placeholder="Enter Your number"
+          minlength="11" maxlength="11">
+        <input type="email" name="email" placeholder="Enter Your Email">
+        <textarea name="message" placeholder="Type Your message"></textarea>
+        <input type="submit" name="submit">
+      </form>
+      <iframe class="maps"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d426.5148710442626!2d29.937386141263037!3d31.217433219446104!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5c48ddf56aa71%3A0x1b0b81e0086d5a26!2s17%20Al%20Akaba%2C%20Sidi%20Gabir%2C%20Sidi%20Gaber%2C%20Alexandria%20Governorate%205433024!5e0!3m2!1sen!2seg!4v1718856692606!5m2!1sen!2seg"
+        width="700" height="800" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+  <!-- End ContactUs  -->
   <!-- Start Footer -->
   <footer>
     <div>
@@ -61,21 +148,7 @@
     </div>
   </footer>
   <!-- End Footer -->
-    <!-- Start Alert  -->
-  <div id="alert">
-    <div id="container">
-      <lord-icon src="https://cdn.lordicon.com/dvqeipeg.json" trigger="in" delay="1000" state="in-reveal"
-        style="width:150px;height:150px">
-      </lord-icon>
-      <h4>Website is Under Construction</h4>
-      <p>Thank you for visiting! I am a junior front-end web developer, and this website is currently a work in
-        progress. As I continue to learn and grow, there may be some issues and unfinished elements. I appreciate your
-        patience and understanding as I work to improve my skills and enhance this site.</p>
-        <button id="btn">Got it!</button>
-    </div>
-  </div>
-  <!-- End Alert  -->
-  <div id="overlay"></div>
+
   <script src="script.js"></script>
 </body>
 
