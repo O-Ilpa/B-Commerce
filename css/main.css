@@ -1,3 +1,4 @@
+
 /* Start Global */
 :root {
   --header-color: #4e342e;
@@ -44,11 +45,12 @@ body {
 
 header {
   top: 5px;
-  position: fixed;
+  position: absolute;
   width: 99%;
   left: 0.5%;
   z-index: 6;
   border-radius: 20px;
+  transition: top 0.9s, position 0.9s;
 }
 .contain {
   display: flex;
@@ -62,18 +64,6 @@ header {
   border-radius: 20px;
 
 }
-/* .contain::before {
-  content: "";
-  position: absolute;
-  background-color: var(--main-color);
-  filter: blur(1.1px);
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 20px;
-} */
 .contain .logo {
   height: 75px;
 }
@@ -82,6 +72,7 @@ header {
   flex-direction: row;
   transition: 2s;
   position: relative;
+  margin-right: 20px;
 }
 .contain .nav-bar {
   display: flex;
@@ -368,17 +359,47 @@ header {
     display: none !important;
   }
 }
+@media (max-width:500px) {
+  .a-landing .container h1 {
+    font-size: 40px !important;
+  }
+}
 .a-landing .container {
-  height: 36vh;
+  max-height: 50vh;
   overflow: hidden;
   position: relative;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  background-color: black;
 }
 .a-landing .container img {
   width: 100%;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  height: 100%;
+}
+.a-landing .container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.445);
+}
+.a-landing {
+  background-color: var(--secondary-color);
 }
 .a-landing .container h1 {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
+  font-size: 70px;
+  color: var(--secondary-color);
+  z-index: 1;
+  margin-left: 100px;
 }
 /* End About */
 
@@ -467,7 +488,7 @@ header {
   margin: 20px;
   cursor: pointer;
   background: var(--header-color);
-  color: white;
+  color: var(--secondary-color);
 }
 .Contact-us .container form {
   display: flex;
@@ -516,25 +537,7 @@ header {
   }
 }
 /* End ContactUs  */
-
-/* Start Footer */
-footer {
-  display: flex;
-  justify-content: center;
-  font-size: 25px;
-  position: relative;
-  background-color: rgb(78 52 46 / 50%);
-  backdrop-filter: blur(5px);
-}
-footer p {
-  z-index: 8
-}
-@media (max-width: 500px) {
-  footer {
-    font-size: 18px;
-  }
-}
-/* End Footer */
+/* Start Alert  */
 
 #alert {
   display: none;
@@ -561,11 +564,49 @@ footer p {
   transform: translateX(-50%) translateY(-50%);
   color: var(--secondary-color);
 }
-
+#MainAlert {
+  display: block;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
+  z-index: 10;
+}
+#MainAlert #MainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 750px;
+  width: 850px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 14px;
+  border-radius: 20px;
+  backdrop-filter: blur(21px);
+  position: fixed;
+  transform: translateX(-50%) translateY(-50%);
+  color: var(--secondary-color);
+}
+#MainAlert #MainContainer h1 {
+  font-size: 50px;
+}
+#MainAlert #MainContainer p {
+  font-size: 25px;
+}
 #alert button {
   border: none;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5) ;
+  color: white;
+  cursor: pointer;
+}
+#MainAlert #MainButton {
+  border: none;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 15px;
   background-color: rgba(0, 0, 0, 0.5) ;
   color: white;
   cursor: pointer;
@@ -577,9 +618,82 @@ footer p {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7); 
-
+  background: rgba(0, 0, 0, 0.792); 
   align-items: center;
   justify-content: center;
   z-index: 9; 
 }
+#MainOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.96); 
+  align-items: center;
+  justify-content: center;
+  z-index: 9; 
+}
+@media (max-width: 1300px) {
+  #MainAlert #MainContainer {
+    height: 550px;
+    width: 550px;
+  }
+  #MainAlert #MainContainer h1 {
+    font-size: 30px;
+  }
+  #MainAlert #MainContainer p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 635px) {
+  #MainAlert #MainContainer {
+    height: 550px;
+    width: 450px;
+  }
+  #MainAlert #MainContainer h1 {
+    font-size: 25px;
+  }
+  #MainAlert #MainContainer p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 530px) {
+  #MainAlert #MainContainer {
+    height: 450px;
+    width: 350px;
+  }
+  #MainAlert #MainContainer h1 {
+    font-size: 20px;
+  }
+  #MainAlert #MainContainer p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 350px) {
+  #MainAlert #MainContainer {
+    height: 450px;
+    width: 300px;
+  }
+}
+/* End Alert  */
+
+/* Start Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  position: relative;
+  background-color: rgb(78, 52, 46);
+  backdrop-filter: blur(5px);
+  color: var(--secondary-color);
+}
+footer p {
+  z-index: 8
+}
+@media (max-width: 500px) {
+  footer {
+    font-size: 18px;
+  }
+}
+/* End Footer */
